@@ -1,2 +1,3 @@
-# Anondos.github.io
-Just testing
+Never give up.
+A little learning is dangerous thing.
+
