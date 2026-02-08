@@ -1,140 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>HTML Table</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>দৈনিক রুটিন সময়সূচী | Daily Routine Schedule</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .table-wrapper {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+
+    thead {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-weight: 600;
+    }
+
+    th {
+      padding: 18px 15px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 16px 15px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      transition: background-color 0.2s ease;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    tbody tr:hover {
+      background-color: #e8eef7;
+      box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.1);
+    }
+
+    tbody tr:first-child td {
+      font-weight: 600;
+      background-color: #f0f2f9;
+      color: #667eea;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+      }
+
+      .table-wrapper {
+        border-radius: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+
+      th, td {
+        padding: 10px 5px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Accessibility */
+    table:focus-visible {
+      outline: 3px solid #667eea;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 
 <body>
-
- <table border="10" width="initial" height="initia">
-  <tr>
-   <th>বার/সময়</th>
-   <th>শনিবার</th>
-   <th>রবিবার</th>
-   <th>সোমবার</th>
-   <th>মঙ্গলবার</th>
-   <th> বুধবার</th>
-   <th> বৃহস্পতিবার</th>
-   <th> শুক্রবার</th>
-  </tr>
-
-  <tr>
-   <td>৫:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-
-  <tr>
-   <td>৬:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   </tr>
-  <tr>
-   <td>৭:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-
-<tr>
-   <td>৮:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-
-<tr>
-   <td>৯:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-<tr>
-   <td>১০:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-<tr>
-   <td>১১:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-<tr>
-   <td>১২:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-<tr>
-   <td>১:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
-
-<tr>
-   <td>২:০০</td>
-   <td>মন পরিষ্কার</td>
-   <td> পড়ালেখা শুরু</td>
-   <td>বিরতি</td>
-   <td>তথ্য প্রযুক্তি</td>
-   <td>শরীর পরিষ্কার</td>
-   <td>চিএ অঙ্কন</td>
-   <td>ক্রীড়া</td>
-   
-  </tr>
- </table>
-
+  <div class="container">
+    <h1>দৈনিক রুটিন সময়সূচী</h1>
+    
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>বার/সময়</th>
+            <th>শনিবার</th>
+            <th>রবিবার</th>
+            <th>সোমবার</th>
+            <th>মঙ্গলবার</th>
+            <th>বুধবার</th>
+            <th>বৃহস্পতিবার</th>
+            <th>শুক্রবার</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>৫:০০</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>৬:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>৭:०००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>৮:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>९:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>१०:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>११:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>१२:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>१:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চित्र অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+          <tr>
+            <td>२:००</td>
+            <td>মন পরিষ্কার</td>
+            <td>পড়ালেখা শুরু</td>
+            <td>বিরতি</td>
+            <td>তথ্য প্রযুক্তি</td>
+            <td>শরীর পরিষ্কার</td>
+            <td>চিত্র অঙ্কন</td>
+            <td>ক্রীড়া</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
-	
+
 </html>
